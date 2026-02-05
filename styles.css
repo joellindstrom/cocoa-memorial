@@ -1,0 +1,273 @@
+/* Memorial page styles for Cocoa */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    color: #3d3d3d;
+    background-color: #faf9f7;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #8b7355 0%, #a08060 50%, #c4a77d 100%);
+    color: white;
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    background: linear-gradient(to bottom right, transparent 49%, #faf9f7 50%);
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.hero .subtitle {
+    font-size: 1.4rem;
+    font-style: italic;
+    margin-bottom: 15px;
+    opacity: 0.95;
+}
+
+.hero .years {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    opacity: 0.9;
+}
+
+/* Main Content Sections */
+section {
+    padding: 60px 0;
+}
+
+section h2 {
+    font-size: 2rem;
+    color: #5d4e37;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+section p {
+    font-size: 1.15rem;
+    margin-bottom: 25px;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.opening {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #5d4e37;
+    margin-bottom: 40px;
+}
+
+/* Photo Styles */
+.photo-feature {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.photo-feature img {
+    max-width: 100%;
+    max-height: 500px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.photo-row {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.photo-row img {
+    flex: 1;
+    min-width: 250px;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.photo-row img:hover {
+    transform: scale(1.02);
+}
+
+.caption {
+    font-style: italic;
+    color: #777;
+    font-size: 0.95rem;
+    margin-top: 10px;
+}
+
+/* Adventures Section */
+.adventures {
+    background-color: #f5f0e8;
+}
+
+/* Video Container */
+.video-container {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 640px;
+    height: 360px;
+    border-radius: 8px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+/* Photo Gallery */
+.gallery {
+    background-color: #f5f0e8;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.2);
+}
+
+/* Farewell Section */
+.farewell {
+    background: linear-gradient(180deg, #faf9f7 0%, #f5f0e8 100%);
+    padding-bottom: 80px;
+}
+
+.farewell .closing {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: #5d4e37;
+    margin-top: 40px;
+    font-weight: 400;
+}
+
+.paw-prints {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    opacity: 0.6;
+}
+
+/* Footer */
+footer {
+    background-color: #5d4e37;
+    color: #e8e0d5;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+footer p {
+    font-size: 1rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero .subtitle {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    section p {
+        font-size: 1.05rem;
+    }
+
+    .photo-row img {
+        min-width: 100%;
+        height: auto;
+        max-height: 350px;
+    }
+
+    .video-container iframe {
+        height: 250px;
+    }
+
+    .photo-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .photo-grid img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .opening {
+        font-size: 1.2rem;
+    }
+
+    section h2 {
+        font-size: 1.6rem;
+    }
+}
